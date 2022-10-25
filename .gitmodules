@@ -1,0 +1,3 @@
+[submodule "code-aster-copy"]
+	path = code-aster-copy
+	url = https://github.com/Krande/code-aster-copy
