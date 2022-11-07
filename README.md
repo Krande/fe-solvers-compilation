@@ -6,19 +6,19 @@ A repo for
 
 https://gitlab.com/codeaster/src
 
-- []: Compile latest Code Aster in a dockerfile for linux
-- []: Create conda packages of latest code aster
-  - []: Linux
-  - []: windows
+- [ ] Compile latest Code Aster in a dockerfile for linux
+- [ ] Create conda packages of latest code aster
+  - [ ] Linux
+  - [ ] windows
 
 ### Calculix
 
 https://github.com/Dhondtguido/CalculiX
 
-- []: Compile latest Calculix in a dockerfile
-- []: Create a conda packages of Calculix
-  - []: Linux
-  - []: windows 
+- [ ] Compile latest Calculix in a dockerfile
+- [ ] Create a conda packages of Calculix
+  - [ ] Linux
+  - [ ] windows 
 
 ## Resources
 
