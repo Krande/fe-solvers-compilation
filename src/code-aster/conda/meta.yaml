@@ -1,0 +1,31 @@
+{% set name = "code-aster" %}
+{% set version = "15.4.2" %}
+
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  path: ../source
+
+build:
+  number: 0
+  script: python -m pip install --no-deps --ignore-installed .
+
+requirements:
+  build:
+    - python
+  run:
+    - python
+    - hdf5
+
+about:
+  home: https://github.com/krande/fem-compilation
+  license: ""
+  license_family:
+  summary: ""
+
+extra:
+  recipe-maintainers:
+    - Krande

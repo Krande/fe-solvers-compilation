@@ -1,7 +1,7 @@
 FROM ubuntu:22.04 as base
 
 RUN mkdir -p $HOME/dev/codeaster
-COPY code-aster-copy $HOME/dev/codeaster
+COPY source $HOME/dev/codeaster
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV BUILD std
