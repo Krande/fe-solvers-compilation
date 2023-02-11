@@ -1,0 +1,17 @@
+name: ca-dev
+channels:
+  - conda-forge
+dependencies:
+  - gfortran
+  - libmed
+  - scotch
+  - metis
+  - mumps
+  - waf
+  - hdf5
+  - numpy
+  - glib
+  - openmpi
+  - openmpi-mpicc
+  - openmpi-mpicxx
+  - openmpi-mpifort
