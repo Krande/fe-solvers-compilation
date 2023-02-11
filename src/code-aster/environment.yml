@@ -2,16 +2,15 @@ name: ca-dev
 channels:
   - conda-forge
 dependencies:
-  - gfortran
-  - libmed
+  - gfortran # Compilers
+  - waf
+  - libmed==4.1.0 # code aster dependencies
   - scotch
   - metis
-  - mumps
-  - waf
+  - mumps-include
+  - mumps-mpi
+  - mumps-seq
+  - petsc
   - hdf5
   - numpy
   - glib
-  - openmpi
-  - openmpi-mpicc
-  - openmpi-mpicxx
-  - openmpi-mpifort
