@@ -1,7 +1,9 @@
 # Need to specify bash in order for conda activate to work.
 SHELL=/bin/bash
 # Note that the extra activate is needed to ensure that the activate floats env to the front of PATH
-CONDA_ACTIVATE=source /home/kristoffer/mambaforge/etc/profile.d/conda.sh ; conda activate ; conda activate ca-dev;
+ACTIVATE=source /home/kristoffer/mambaforge/etc/profile.d/conda.sh ; conda activate ;
+CONDA_ACTIVATE=$(ACTIVATE) conda activate ca-dev;
+CONDA_BUILD_ACTIVATE=$(ACTIVATE) conda activate conda-build;
 VERSION_MED=4.1.0
 VERSION_ASRUN=2021.1.0
 VERSION_MUMPS=5.2.1_aster2
@@ -26,8 +28,11 @@ copy :
 build:
 	$(CONDA_ACTIVATE) cp config/wafcfg_conda.py source/wafcfg_conda.py && ./build.sh
 
+build-conda:
+
+
 checkout:
-	git checkout tags/$(VERSION_ASTER)
+	cd source && git checkout tags/$(VERSION_ASTER)
 
 # Various Downloads
 med:

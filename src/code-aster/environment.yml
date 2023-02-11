@@ -2,6 +2,7 @@ name: ca-dev
 channels:
   - conda-forge
 dependencies:
+  - gcc
   - gfortran # Compilers
   - waf
   - libmed==4.1.0 # code aster dependencies
@@ -14,3 +15,4 @@ dependencies:
   - hdf5
   - numpy
   - glib
+  - boost

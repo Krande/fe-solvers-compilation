@@ -1,6 +1,3 @@
 [submodule "src/code-aster/source"]
 	path = src/code-aster/source
 	url = https://gitlab.com/codeaster/src
-[submodule "src/calculix/source"]
-	path = src/calculix/source
-	url = https://github.com/Dhondtguido/CalculiX

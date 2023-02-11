@@ -1,5 +1,5 @@
 {% set name = "code-aster" %}
-{% set version = "15.4.2" %}
+{% set version = "15.5.2" %}
 
 
 package:
@@ -7,21 +7,45 @@ package:
   version: {{ version }}
 
 source:
-  path: ../source
+  url: https://gitlab.com/codeaster/src
+  tag: {{ version }}
 
 build:
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: ../build.sh
 
 requirements:
+  host:
+    - gcc
+    - gfortran
+    - waf
   build:
-    - python
-  run:
-    - python
+    - libmed==4.1.0 # code aster dependencies
+    - scotch
+    - metis
+    - mumps-include
+    - mumps-mpi
+    - mumps-seq
+    - petsc
     - hdf5
+    - numpy
+    - glib
+    - boost
+  run:
+    - libmed==4.1.0 # code aster dependencies
+    - scotch
+    - metis
+    - mumps-include
+    - mumps-mpi
+    - mumps-seq
+    - petsc
+    - hdf5
+    - numpy
+    - glib
+    - boost
 
 about:
-  home: https://github.com/krande/fem-compilation
+  home: https://github.com/krande/fe-solvers-compilation
   license: ""
   license_family:
   summary: ""

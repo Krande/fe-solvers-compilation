@@ -1,24 +1,23 @@
 # FEM compilation
 
-A repo for 
+A repo for open source FEA compilation
 
 ### Code Aster
 
 https://gitlab.com/codeaster/src
 
-- [ ] Compile latest Code Aster in a dockerfile for linux
+- [x] Compile latest Code Aster in a dockerfile for linux (Thanks! https://github.com/aethereng/docker-codeaster)
 - [ ] Create conda packages of latest code aster
   - [ ] Linux
   - [ ] windows
+  - [ ] macos
 
 ### Calculix
 
-https://github.com/Dhondtguido/CalculiX
+A conda package is already available!
 
-- [ ] Compile latest Calculix in a dockerfile
-- [ ] Create a conda packages of Calculix
-  - [ ] Linux
-  - [ ] windows 
+- Conda Package: https://anaconda.org/conda-forge/calculix
+- Source Code: https://github.com/Dhondtguido/CalculiX
 
 ## Resources
 
