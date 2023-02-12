@@ -6,3 +6,4 @@ dependencies:
   - conda-verify
   - anaconda-client
   - ninja
+  - boa

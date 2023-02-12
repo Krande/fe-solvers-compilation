@@ -7,9 +7,8 @@ List of dependencies and whether they are present on conda
 * [x] mumps - [conda](https://anaconda.org/conda-forge/mumps) - [feedstock](https://github.com/conda-forge/mumps-feedstock)
 * [x] scotch - [conda](https://anaconda.org/conda-forge/scotch) - [feedstock](https://github.com/conda-forge/scotch-feedstock)
 * [x] petsc - [conda](https://anaconda.org/conda-forge/petsc) - [feedstock](https://github.com/conda-forge/petsc-feedstock)
-* [ ] asrun - [source](https://git.salome-platform.org/gitweb/?p=modules/asrun.git;a=summary)
-* [ ] tfel?
-* [ ] mfront?
+* [ ] asrun - [source](https://git.salome-platform.org/gitweb/?p=modules/asrun.git;a=summary) - [conda](https://anaconda.org/conda-forge/asrun)
+* [ ] mfront/tfel?
 * [ ] homard?
 
 

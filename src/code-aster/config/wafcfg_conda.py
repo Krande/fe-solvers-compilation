@@ -22,7 +22,7 @@ def configure(self):
 
     # to fail if not found
     opts.enable_hdf5 = True
-    opts.enable_med = True
+    #opts.enable_med = True
     opts.enable_metis = True
     opts.enable_mumps = True
     opts.enable_scotch = True

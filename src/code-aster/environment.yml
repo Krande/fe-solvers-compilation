@@ -1,18 +1,20 @@
 name: ca-dev
 channels:
+  - krande
   - conda-forge
 dependencies:
-  - gcc
-  - gfortran # Compilers
+  - gcc==8.5.0
+  - cxx-compiler
+  - gfortran==8.5.0 # Compilers
   - waf
   - libmed==4.1.0 # code aster dependencies
+  - asrun
   - scotch
   - metis
   - mumps-include
   - mumps-mpi
   - mumps-seq
   - petsc
-  - hdf5
   - numpy
   - glib
   - boost

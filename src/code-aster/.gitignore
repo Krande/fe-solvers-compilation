@@ -1,0 +1,4 @@
+source/*.waf3*/
+source/wafcfg_conda.py
+source/.lock*
+source/build/

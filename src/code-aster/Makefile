@@ -1,7 +1,7 @@
 # Need to specify bash in order for conda activate to work.
 SHELL=/bin/bash
 # Note that the extra activate is needed to ensure that the activate floats env to the front of PATH
-ACTIVATE=source /home/kristoffer/mambaforge/etc/profile.d/conda.sh ; conda activate ;
+ACTIVATE=source $HOME/mambaforge/etc/profile.d/conda.sh ; conda activate ;
 CONDA_ACTIVATE=$(ACTIVATE) conda activate ca-dev;
 CONDA_BUILD_ACTIVATE=$(ACTIVATE) conda activate conda-build;
 VERSION_MED=4.1.0
@@ -22,14 +22,14 @@ endef
 dev:
 	mamba env update -f environment.yml --prune
 
-copy :
-	cp -r /home/kristoffer/mambaforge/envs/ca-dev/lib/python3.9/site-packages/code_aster .
+dev2:
+	mamba env update -f environment.condabuild.yml --prune
 
 build:
 	$(CONDA_ACTIVATE) cp config/wafcfg_conda.py source/wafcfg_conda.py && ./build.sh
 
 build-conda:
-
+	$(CONDA_BUILD_ACTIVATE) conda mambabuild .
 
 checkout:
 	cd source && git checkout tags/$(VERSION_ASTER)
