@@ -11,7 +11,7 @@ on:
 
 jobs:
   build_wgpu:
-    name: wgpu-${{ matrix.platform.name }}-${{ matrix.pyver.name }}
+    name: code-aster-${{ matrix.platform.name }}-${{ matrix.pyver.name }}
     runs-on: ${{ matrix.platform.distver }}
     defaults:
       run:
