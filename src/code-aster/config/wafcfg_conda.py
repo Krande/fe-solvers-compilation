@@ -5,8 +5,11 @@ def configure(self):
     opts = self.options
 
     print('Running Conda Configuration')
+
     include_dir = os.getenv('CONDA_INCLUDE_PATH')
     lib_dir = os.getenv('CONDA_LIBRARY_PATH')
+
+    self.env['ADDMEM'] = 600
 
     self.env.INCLUDES_BOOST = include_dir
     self.env.LIBPATH_BOOST = [lib_dir]
@@ -22,7 +25,7 @@ def configure(self):
 
     # to fail if not found
     opts.enable_hdf5 = True
-    #opts.enable_med = True
+    opts.enable_med = True
     opts.enable_metis = True
     opts.enable_mumps = True
     opts.enable_scotch = True

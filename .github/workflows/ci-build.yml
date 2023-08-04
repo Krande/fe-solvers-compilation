@@ -1,0 +1,41 @@
+name: ci-pygfx
+
+# bump 1
+on:
+  push:
+    paths:
+      - src/**
+      - .github/workflows/ci-build.yml
+#    branches:
+#      - donotrun
+
+jobs:
+  build_wgpu:
+    name: wgpu-${{ matrix.platform.name }}-${{ matrix.pyver.name }}
+    runs-on: ${{ matrix.platform.distver }}
+    defaults:
+      run:
+        shell: bash -l {0}
+    strategy:
+      fail-fast: false
+      matrix:
+        pyver: [
+          { name: py310, distver: '3.10' },
+        ]
+        platform: [
+#          { name: win, distver: windows-latest },
+          { name: linux, distver: ubuntu-latest },
+#          { name: macOS, distver: macos-latest }
+        ]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: mamba-org/setup-micromamba@v1 # https://github.com/mamba-org/setup-micromamba
+        with:
+          environment-file: src/code-aster/environment.boa.yml
+          create-args: >-
+            python=${{ matrix.pyver.distver }}
+
+      - name: build code-aster package
+        run: |
+          boa build .
+        working-directory: src/code-aster

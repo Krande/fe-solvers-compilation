@@ -11,16 +11,29 @@ source:
     url: https://gitlab.com/codeaster/src/-/archive/{{ version }}/src-{{ version }}.tar.gz
 
 build:
+  detect_binary_files_with_prefix: true
   number: 0
 
 
 requirements:
-  host:
-    - waf
   build:
-    - '{{ compiler("c") }}'
-    - '{{ compiler("cxx") }}'
-    - libmed==4.1.0 # code aster dependencies
+    - waf
+    - gcc 8  # [linux]
+    - gxx 8  # [linux]
+    - gfortran 8  # [linux]
+    - libmed 4.1.0
+    - scotch
+    - metis
+    - mumps-include
+    - mumps-mpi
+    - mumps-seq
+    - petsc
+    - hdf5
+    - numpy
+    - glib
+    - boost
+  host:
+    - libmed 4.1.0
     - scotch
     - metis
     - mumps-include
@@ -32,7 +45,7 @@ requirements:
     - glib
     - boost
   run:
-    - libmed==4.1.0 # code aster dependencies
+    - "{{ pin_compatible('libmed', max_pin='x.x') }}"
     - scotch
     - metis
     - mumps-include
