@@ -6,8 +6,12 @@ A repo for open source FEA compilation
 
 https://gitlab.com/codeaster/src
 
+Conda package of Code Aster <= 14.8 exists
+* https://anaconda.org/conda-forge/code-aster
+* https://github.com/conda-forge/code-aster-feedstock
+
 - [x] Compile latest Code Aster in a dockerfile for linux (Thanks! https://github.com/aethereng/docker-codeaster)
-- [ ] Create conda packages of latest code aster
+- [ ] Create conda packages of latest code aster 
   - [ ] Linux
   - [ ] windows
   - [ ] macos
