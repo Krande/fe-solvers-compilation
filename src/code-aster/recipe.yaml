@@ -1,6 +1,8 @@
 context:
   name: code-aster
   version: 15.5.2
+  asrun_ver: 2021.1.0
+  med_ver: 4.0.0
 
 package:
   name: '{{ name|lower }}'
@@ -9,6 +11,10 @@ package:
 source:
   - fn: '{{ name }}_{{ version }}.tar.gz'
     url: https://gitlab.com/codeaster/src/-/archive/{{ version }}/src-{{ version }}.tar.gz
+  - hg_url: http://hg.code.sf.net/p/prereq/frontend
+    hg_tag: '{{ asrun_ver }}'
+    folder: deps/asrun
+
 
 build:
   detect_binary_files_with_prefix: true
@@ -18,27 +24,32 @@ build:
 requirements:
   build:
     - waf
-    - gcc 8  # [linux]
-    - gxx 8  # [linux]
-    - gfortran 8  # [linux]
-    - libmed 4.1.0
+    - "{{ compiler('c') }}"
+    - "{{ compiler('cxx') }}"
+    - "{{ compiler('gfortran') }}"
+    #- gcc 8  # [linux]
+    #- gxx 8  # [linux]
+    #- gfortran 8  # [linux]
+    - "libmed {{ med_ver }}"
     - scotch
     - metis
     - mumps-include
     - mumps-mpi
     - mumps-seq
+    - mfront
     - petsc
     - hdf5
     - numpy
     - glib
     - boost
   host:
-    - libmed 4.1.0
+    - "libmed {{ med_ver }}"
     - scotch
     - metis
     - mumps-include
     - mumps-mpi
     - mumps-seq
+    - mfront
     - petsc
     - hdf5
     - numpy
