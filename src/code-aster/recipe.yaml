@@ -11,6 +11,8 @@ package:
 source:
   - fn: '{{ name }}_{{ version }}.tar.gz'
     url: https://gitlab.com/codeaster/src/-/archive/{{ version }}/src-{{ version }}.tar.gz
+    patches:
+      - patches/add_stdexcept.patch
   - hg_url: http://hg.code.sf.net/p/prereq/frontend
     hg_tag: '{{ asrun_ver }}'
     folder: deps/asrun
