@@ -27,9 +27,6 @@ requirements:
     - "{{ compiler('c') }}"
     - "{{ compiler('cxx') }}"
     - "{{ compiler('gfortran') }}"
-    #- gcc 8  # [linux]
-    #- gxx 8  # [linux]
-    #- gfortran 8  # [linux]
     - "libmed {{ med_ver }}"
     - scotch
     - metis
@@ -57,12 +54,12 @@ requirements:
     - boost-cpp
   run:
     - "{{ pin_compatible('libmed', max_pin='x.x') }}"
+    - "{{ pin_compatible('mfront', max_pin='x.x') }}"
     - scotch
     - metis
     - mumps-include
 #    - mumps-mpi
     - mumps-seq
-    - "{{ pin_compatible('mfront', max_pin='x.x') }}"
     - petsc
     - hdf5
     - numpy

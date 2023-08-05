@@ -14,9 +14,9 @@ def configure(self):
     self.env.INCLUDES_BOOST = include_dir
     self.env.LIBPATH_BOOST = [lib_dir]
     self.env.LIB_BOOST = ['libboost_python310']
-
-    self.env['TFELHOME'] = os.getenv("CONDA_PREFIX", lib_dir) + '/bin/mfront'
-    self.env['TFELVERS'] = '4.1.0'
+    self.env.TFELHOME= [os.getenv('CONDA_PREFIX'), os.getenv('CONDA_PREFIX') +'/bin']
+    #self.env['TFELHOME'] = os.getenv("CONDA_PREFIX", lib_dir) + '/bin/mfront'
+    # self.env['TFELVERS'] = '4.1.0'
     # self.env.MED_LIBS = [lib_dir]
 
     self.env.append_value('LIBPATH', [

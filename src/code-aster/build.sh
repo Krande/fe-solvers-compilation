@@ -2,7 +2,7 @@
 
 export CONDA_INCLUDE_PATH="$CONDA_PREFIX/include"
 export CONDA_LIBRARY_PATH="$CONDA_PREFIX/lib"
-#export TFELHOME="$CONDA_PREFIX"
+#export TFELHOME="$CONDA_PREFIX;$CONDA_PREFIX/bin"
 
 cp $RECIPE_DIR/config/wafcfg_conda.py .
 pip install ./deps/asrun
