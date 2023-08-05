@@ -34,39 +34,40 @@ requirements:
     - scotch
     - metis
     - mumps-include
-    - mumps-mpi
+#    - mumps-mpi
     - mumps-seq
     - mfront
     - petsc
     - hdf5
     - numpy
     - glib
-    - boost
+    - boost-cpp
   host:
     - "libmed {{ med_ver }}"
     - scotch
     - metis
     - mumps-include
-    - mumps-mpi
+#    - mumps-mpi
     - mumps-seq
     - mfront
     - petsc
     - hdf5
     - numpy
     - glib
-    - boost
+    - boost-cpp
   run:
     - "{{ pin_compatible('libmed', max_pin='x.x') }}"
     - scotch
     - metis
     - mumps-include
-    - mumps-mpi
+#    - mumps-mpi
     - mumps-seq
+    - "{{ pin_compatible('mfront', max_pin='x.x') }}"
     - petsc
     - hdf5
     - numpy
     - glib
-    - boost
+    - boost-cpp
 
 about:
   home: https://www.code-aster.org
