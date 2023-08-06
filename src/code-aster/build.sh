@@ -37,4 +37,4 @@ export LINKFLAGS="${LINKFLAGS} -Wl,--no-as-needed,-rpath=${CONDA_LIBRARY_PATH}"
   --install-tests \
   configure
 # ./waf_std build
-./waf_std install
+./waf_std install -j 1

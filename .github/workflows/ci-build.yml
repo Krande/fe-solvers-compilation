@@ -1,4 +1,4 @@
-name: ci-pygfx
+name: ci-code-aster
 
 # bump 1
 on:
@@ -10,7 +10,7 @@ on:
 #      - donotrun
 
 jobs:
-  build_wgpu:
+  code_aster:
     name: code-aster-${{ matrix.platform.name }}-${{ matrix.pyver.name }}
     runs-on: ${{ matrix.platform.distver }}
     defaults:
