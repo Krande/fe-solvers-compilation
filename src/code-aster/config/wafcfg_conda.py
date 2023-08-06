@@ -8,16 +8,20 @@ def configure(self):
 
     include_dir = os.getenv('CONDA_INCLUDE_PATH')
     lib_dir = os.getenv('CONDA_LIBRARY_PATH')
+    conda_prefix = os.getenv('CONDA_PREFIX')
+    recipe_dir = os.getenv('RECIPE_DIR')
 
     self.env['ADDMEM'] = 600
 
     self.env.INCLUDES_BOOST = include_dir
     self.env.LIBPATH_BOOST = [lib_dir]
     self.env.LIB_BOOST = ['libboost_python310']
-    self.env.TFELHOME= [os.getenv('CONDA_PREFIX'), os.getenv('CONDA_PREFIX') +'/bin']
-    #self.env['TFELHOME'] = os.getenv("CONDA_PREFIX", lib_dir) + '/bin/mfront'
-    # self.env['TFELVERS'] = '4.1.0'
-    # self.env.MED_LIBS = [lib_dir]
+    self.env.TFELHOME = [os.getenv('CONDA_PREFIX'), conda_prefix + '/bin']
+
+    self.env.LIBPATH_METIS = [lib_dir]
+    self.env.INCLUDES_METIS = include_dir
+
+    self.env.WAFBUILD_ENV = [recipe_dir + '/config/dummy.env', conda_prefix]
 
     self.env.append_value('LIBPATH', [
         lib_dir,

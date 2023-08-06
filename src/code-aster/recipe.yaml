@@ -1,6 +1,6 @@
 context:
   name: code-aster
-  version: 15.5.2
+  version: 15.8.0
   asrun_ver: 2021.1.0
   med_ver: 4.0.0
 
@@ -31,7 +31,7 @@ requirements:
     - "{{ compiler('gfortran') }}"
     - "libmed {{ med_ver }}"
     - scotch
-    - metis
+    - metis ==5.1.0
     - mumps-include
 #    - mumps-mpi
     - mumps-seq
@@ -44,7 +44,7 @@ requirements:
   host:
     - "libmed {{ med_ver }}"
     - scotch
-    - metis
+    - metis ==5.1.0
     - mumps-include
 #    - mumps-mpi
     - mumps-seq
@@ -57,8 +57,8 @@ requirements:
   run:
     - "{{ pin_compatible('libmed', max_pin='x.x') }}"
     - "{{ pin_compatible('mfront', max_pin='x.x') }}"
+    - "{{ pin_compatible('metis', max_pin='x.x') }}"
     - scotch
-    - metis
     - mumps-include
 #    - mumps-mpi
     - mumps-seq
