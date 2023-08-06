@@ -23,9 +23,6 @@ make install
 
 cd ../..
 
-export LIBPATH="$PREFIX/metis-aster/lib $PREFIX/mumps-aster/lib $PREFIX/lib $LIBPATH"
-export INCLUDES="$PREFIX/metis-aster/include $PREFIX/include $INCLUDES"
-
 echo "**************** M E T I S  B U I L D  E N D S  H E R E ****************"
 
 export LINKFLAGS="${LINKFLAGS} -Wl,--no-as-needed,-rpath=${CONDA_LIBRARY_PATH}"

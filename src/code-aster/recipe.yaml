@@ -3,6 +3,7 @@ context:
   version: 15.8.0
   asrun_ver: 2021.1.0
   med_ver: 4.0.0
+  mfront_ver: 3.3.2
 
 package:
   name: '{{ name|lower }}'
@@ -34,12 +35,12 @@ requirements:
     - "{{ compiler('cxx') }}"
     - "{{ compiler('gfortran') }}"
     - "libmed {{ med_ver }}"
+    - "mfront {{ mfront_ver }}"
     - scotch
 #    - metis ==5.1.0
     - mumps-include
 #    - mumps-mpi
     - mumps-seq
-    - mfront
     - petsc
     - hdf5
     - numpy
@@ -47,12 +48,12 @@ requirements:
     - boost-cpp
   host:
     - "libmed {{ med_ver }}"
+    - "mfront {{ mfront_ver }}"
     - scotch
 #    - metis ==5.1.0
     - mumps-include
 #    - mumps-mpi
     - mumps-seq
-    - mfront
     - petsc
     - hdf5
     - numpy
