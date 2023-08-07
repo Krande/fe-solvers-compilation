@@ -1,3 +1,6 @@
 [submodule "src/code-aster/source"]
 	path = src/code-aster/source
 	url = https://gitlab.com/codeaster/src
+[submodule "src/code-aster/devtools"]
+	path = src/code-aster/devtools
+	url = https://gitlab.com/codeaster/devtools.git

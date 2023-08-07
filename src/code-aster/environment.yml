@@ -7,12 +7,12 @@ dependencies:
   - cxx-compiler
   - gfortran==8.5.0 # Compilers
   - waf
-  - libmed==4.1.1 # code aster dependencies
+  - libmed==4.0 # code aster dependencies
   - asrun
   - scotch
   - metis
   - mumps-include
-  - mumps-mpi
+#  - mumps-mpi
   - mumps-seq
   - petsc
   - numpy
