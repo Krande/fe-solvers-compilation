@@ -1,22 +1,7 @@
 # Questions & Answers
 
-## Boost vs Boost-cpp
 
-### Question
-I was unable to find \*boost_python3\* in the `boost-cpp` package. 
-I had to install `boost` to get it.
-
-What is the equivalent in boost-cpp to this?
-
-**Notes**
-
-https://github.com/conda-forge/boost-feedstock/issues/53
-
-### Answer
-?
-
-
-### How do I import code_Aster as a module in python
+## How do I import code_Aster as a module in python
 
 export LD_LIBRARY_PATH=/aster/aster/lib64/aster:${LD_LIBRARY_PATH}:.
 export PYTHONPATH=/aster/aster/lib64/aster:${PYTHONPATH}:.
@@ -27,3 +12,19 @@ export ASTER_LOCALEDIR=/aster/aster/share/locale/aster
 export ASTER_ELEMENTSDIR=/aster/aster/lib64/aster
 
 ASTER_PROFILE_LOADED=1
+
+
+As part of a docker image
+
+```dockerfile
+# Test that the latest version is present
+ENV LD_LIBRARY_PATH=/aster/aster/lib64/aster:${LD_LIBRARY_PATH}:.
+ENV PYTHONPATH=/aster/aster/lib64/aster:${PYTHONPATH}:.
+
+ENV ASTER_LIBDIR=/aster/aster/lib64/aster
+ENV ASTER_DATADIR=/aster/aster/share/aster
+ENV ASTER_LOCALEDIR=/aster/aster/share/locale/aster
+ENV ASTER_ELEMENTSDIR=/aster/aster/lib64/aster
+
+RUN python -c "import code_aster; code_aster.init()"
+```

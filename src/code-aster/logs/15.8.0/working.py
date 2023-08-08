@@ -1,0 +1,58 @@
+argv = ['./waf.engine', 'configure', '--use-config=scif_std', '--use-config-dir=/aster/aster/lib',
+        '--prefix=/aster/aster', '--install-tests', '--with-data=/tmp/aster/data', '--without-hg', '--out=build/std',
+        '--jobs=4']
+config_cmd = 'configure'
+environ = {'LC_ALL': 'en_US.UTF-8',
+           'LD_LIBRARY_PATH': '/aster/devtools/lib:/aster/mumps_seq/lib:/aster/scotch_seq/lib:/aster/tfel/lib:/aster/metis/lib:/aster/med/lib:/aster/hdf5/lib:/aster/tfel/lib',
+           'LIBPATH_HDF5': '/aster/hdf5/lib', 'ASTER_DIRECTORY': '/aster', 'VERSION_PARMETIS': '4.0.3',
+           'WAFLOCK': '.lock-std_build', 'LIBPATH_METIS': '/aster/metis/lib', 'INCLUDES_TFEL': '/aster/tfel/include',
+           'LANG': 'en_US.UTF-8', 'VERSION_MED': '4.1.0', 'HOSTNAME': 'ae6b2d983c7b', 'VERSION_TFEL': '3.4.0',
+           'TEMP_DIRECTORY': '/tmp', 'LIBPATH_TFEL': '/aster/tfel/lib', 'LIBPATH_SCOTCH': '/aster/scotch_seq/lib',
+           'INCLUDES_MED': '/aster/med/include', 'VERSION_PETSC': '3.12.3_aster',
+           'INCLUDES_SCOTCH': '/aster/scotch_seq/include', 'CONFIG_PARAMETERS_addmem': '4096', 'PWD': '/tmp/aster',
+           'VERSION_DEVTOOLS': 'default', 'HOME': '/root', 'VERSION_HOMARD': '11.12_aster2', 'LC_CTYPE': 'en_US.UTF-8',
+           'LIBPATH_MED': '/aster/med/lib', 'DEBIAN_FRONTEND': 'noninteractive', 'VERSION_MISS3D': '6.7_aster6',
+           'PYPATH_MED': '/aster/med/lib/python3.6/site-packages', 'VERSION_SCOTCH': '6.0.4_aster7', 'WAFBUILD_ENV': '',
+           'LIBPATH_MUMPS': '/aster/mumps_seq/lib', 'INCLUDES_METIS': '/aster/metis/include', 'PREREQ_PATH': '/aster',
+           'DEVTOOLS_COMPUTER_ID': 'aster', 'LC_MESSAGES': 'POSIX',
+           'LINKFLAGS': '-Wl,--no-as-needed -Wl,-rpath=/aster/mumps_seq/lib:/aster/scotch_seq/lib:/aster/tfel/lib:/aster/metis/lib:/aster/med/lib:/aster/hdf5/lib:/aster/tfel/lib',
+           'VERSION_ASTER': '15.8.0', 'SHLVL': '2', 'LANGUAGE': 'en_US.UTF-8',
+           'PYTHONPATH': '/aster/tfel/lib/python3.6/site-packages:/aster/asrun/lib/python3.6/site-packages:/aster/med/lib/python3.6/site-packages:/aster/asrun/lib/python3.6/site-packages:/aster/tfel/lib/python3.6/site-packages:/aster/med/lib/python3.6/site-packages/med',
+           'INCLUDES_HDF5': '/aster/hdf5/include', 'VERSION_HDF5': '1.10.3', 'VERSION_METIS': '5.1.0_aster4',
+           'VERSION_ASRUN': '2021.1.0', 'PYPATH_ASRUN': '/aster/asrun/lib/python3.6/site-packages',
+           'PATH': '/aster/devtools/bin:/aster/asrun/bin:/aster/miss3d:/aster/homard/bin:/aster/tfel/bin/mfront-3.4.0:/aster/med/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+           'VERSION_MUMPS': '5.2.1_aster2', 'INCLUDES_MUMPS': '/aster/mumps_seq/include /aster/mumps_seq/include_seq',
+           'WAF_SUFFIX': 'std', '_': './waf.engine'}
+files = ['/tmp/aster/bibfor/wscript', '/tmp/aster/code_aster/wscript', '/tmp/aster/run_aster/wscript',
+         '/tmp/aster/bibcxx/wscript', '/tmp/aster/bibc/wscript', '/tmp/aster/mfront/wscript', '/tmp/aster/i18n/wscript',
+         '/tmp/aster/data/wscript', '/tmp/aster/doc/wscript', '/tmp/aster/astest/wscript', '/tmp/aster/wscript']
+hash = b'\r\xea\xdb \xed\x01\xcf&\xe87 G\x9d\x8e\xe6X'
+launch_dir = '/tmp/aster'
+options = {'colors': 'auto', 'jobs': 4, 'keep': 0, 'verbose': 0, 'zones': '', 'profile': 0, 'pdb': 0, 'whelp': 0,
+           'out': '/tmp/aster/build/std', 'top': '', 'no_lock_in_run': '', 'no_lock_in_out': '', 'no_lock_in_top': '',
+           'prefix': '/aster/aster', 'bindir': None, 'libdir': None, 'progress_bar': 0, 'targets': '', 'files': '',
+           'destdir': '', 'force': False, 'distcheck_args': None, 'download': False, 'use_config': 'scif_std',
+           'use_config_dir': '/aster/aster/lib', 'EXEC_PREFIX': '', 'BINDIR': '', 'SBINDIR': '', 'LIBEXECDIR': '',
+           'SYSCONFDIR': '', 'SHAREDSTATEDIR': '', 'LOCALSTATEDIR': '', 'LIBDIR': '', 'INCLUDEDIR': '',
+           'OLDINCLUDEDIR': '', 'DATAROOTDIR': '', 'DATADIR': '', 'INFODIR': '', 'LOCALEDIR': '', 'MANDIR': '',
+           'DOCDIR': '', 'HTMLDIR': '', 'DVIDIR': '', 'PDFDIR': '', 'PSDIR': '', 'custom_fc_sig': False,
+           'check_c_compiler': None, 'check_cxx_compiler': None, 'check_fortran_compiler': None, 'parallel': None,
+           'openmp': None, 'pyc': 1, 'pyo': 1, 'nopycache': None, 'python': None, 'pythondir': None,
+           'pythonarchdir': None, 'maths_libs': None, 'embed_math': False, 'med_libs': 'med', 'embed_med': False,
+           'enable_med': True, 'hdf5_libs': 'hdf5', 'embed_hdf5': None, 'enable_hdf5': True, 'enable_metis': True,
+           'metis_libs': 'metis', 'embed_metis': False, 'enable_parmetis': None, 'parmetis_libs': None,
+           'embed_parmetis': False, 'enable_mumps': True,
+           'mumps_libs': 'dmumps zmumps smumps cmumps mumps_common pord mpiseq', 'embed_mumps': False,
+           'enable_scotch': True, 'scotch_libs': 'esmumps scotch scotcherr', 'embed_scotch': False,
+           'enable_petsc': None, 'petsc_libs': None, 'embed_petsc': False, 'enable_petsc4py': None, 'testname': None,
+           'outputdir': None, 'exectool': None, 'time_limit': None, 'without_repo': True, 'boost_includes': '',
+           'boost_libs': '', 'boost_mt': False, 'boost_abi': '', 'boost_linkage_autodetect': None, 'boost_toolset': '',
+           'boost_python': '36', 'embed_aster': True, 'enable_mfront': True, 'enable_i18n': None, 'legacy': True,
+           'singularityimage': None, 'with_data': '/tmp/aster/data', 'with_prog_gmsh': None, 'with_prog_salome': None,
+           'with_prog_run_miss3d': None, 'with_prog_homard': None, 'with_prog_ecrevisse': None,
+           'with_prog_xmgrace': None, 'with_prog_gracebat': None, 'with_prog_mfront': None, 'with_prog_mdump': None,
+           'with_py_med': None, 'with_py_medcoupling': None, 'with_py_mpi4py': None, 'enable_doc': None,
+           'enable_pdf': None, 'with_validation': None, 'install_tests': True, 'embed_all': False, 'enable_all': None}
+out_dir = '/tmp/aster/build/std'
+run_dir = '/tmp/aster'
+top_dir = '/tmp/aster'
