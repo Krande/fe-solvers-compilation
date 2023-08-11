@@ -1,4 +1,3 @@
-checking environment... executing: ./waf.engine configure --help --out=build/std --jobs=4
 waf [commands] [options]
 
 Main commands (example: ./waf build -j4)
@@ -37,7 +36,7 @@ Options:
   --version             show program's version number and exit
   -c COLORS, --color=COLORS
                         whether to use colors (yes/no/auto) [default: auto]
-  -j JOBS, --jobs=JOBS  amount of parallel jobs (16)
+  -j JOBS, --jobs=JOBS  amount of parallel jobs (12)
   -k, --keep            continue despite errors (-kk to try harder)
   -v, --verbose         verbosity level -v -vv or -vvv [default: 0]
   --zones=ZONES         debugging zones (task_gen, deps, tasks, etc)
@@ -47,8 +46,8 @@ Options:
     -o OUT, --out=OUT   build dir for the project
     -t TOP, --top=TOP   src dir for the project
     --download          try to download the tools if missing
-    --use-config=CFG    force the configuration parameters by importing CFG.py. Several modules may be provided (comma
-                        separated).
+    --use-config=CFG    force the configuration parameters by importing CFG.py. Several modules may be
+                        provided (comma separated).
     --use-config-dir=CFG_DIR
                         path or url where to find the configuration file
     --check-fortran-compiler=CHECK_FORTRAN_COMPILER
@@ -65,8 +64,10 @@ Options:
   Build and installation options:
     -p, --progress      -p: progress bar; -pp: ide output
     --targets=TARGETS   task generators, e.g. "target1,target2"
-    --fast              use fast algorithm based on modification time to check for dependencies of fortran sources
-    --safe              use safe algorithm based on content to check for implicit dependencies of fortran sources
+    --fast              use fast algorithm based on modification time to check for dependencies of fortran
+                        sources
+    --safe              use safe algorithm based on content to check for implicit dependencies of fortran
+                        sources
 
   Step options:
     --files=FILES       files to process, by regexp, e.g. "*/main.c,*/test/main.o"
@@ -77,9 +78,9 @@ Options:
                         arguments to pass to distcheck
 
   Installation prefix:
-    By default, "waf install" will put the files in "../install/std/bin", "../install/std/lib" etc. An installation
-    prefix other than "../install/std" can be given using "--prefix", for example "--prefix=$HOME". Using
-    'waf_variant', 'std' will be automatically replaced by 'variant'.
+    By default, "waf install" will put the files in "../install/std/bin", "../install/std/lib" etc. An
+    installation prefix other than "../install/std" can be given using "--prefix", for example "--
+    prefix=$HOME". Using 'waf_variant', 'std' will be automatically replaced by 'variant'.
 
     --destdir=DESTDIR   installation root [default: '']
     --exec-prefix=EXEC_PREFIX
@@ -121,14 +122,14 @@ Options:
     --disable-openmp    Disable OpenMP
     -n TESTNAME, --name=TESTNAME
                         name of testcases to run (as_run must be in PATH)
-    --outputdir=DIR     directory to store the output files. A default value can be stored in ~/.hgrc under the section
-                        "aster"
+    --outputdir=DIR     directory to store the output files. A default value can be stored in ~/.hgrc
+                        under the section "aster"
     --exectool=EXECTOOL
-                        run a testcase by passing additional arguments (possible values are "env" + those defined in the
-                        configuration)
+                        run a testcase by passing additional arguments (possible values are "env" + those
+                        defined in the configuration)
     --time_limit=TIME_LIMIT
                         override the time limit of the testcase
-    --without-hg        build without the source repository
+    --without-repo      build without the source repository
     -e, --build-executable
                         build aster as an executable: it is an alias for --embed-aster
     --embed-aster       embed all aster components within a python interpreter
@@ -147,16 +148,17 @@ Options:
     --nopyc             Do not install bytecode compiled .pyc files (configuration) [Default:install]
     --nopyo             Do not install optimised compiled .pyo files (configuration) [Default:install]
     --nopycache         Do not use __pycache__ directory to install objects [Default:auto]
-    --python=PYTHON     python binary to be used [Default: /home/kristoffer/mambaforge/bin/python3]
+    --python=PYTHON     python binary to be used [Default: /home/krande/mambaforge/envs/ca-dev/bin/python]
     --pythondir=PYTHONDIR
                         Installation path for python modules (py, platform-independent .py and .pyc files)
     --pythonarchdir=PYTHONARCHDIR
-                        Installation path for python extension (pyext, platform-dependent .so or .dylib files)
+                        Installation path for python extension (pyext, platform-dependent .so or .dylib
+                        files)
 
   Mathematics  libraries options:
     --maths-libs=MATHS_LIBS
-                        Math librairies to link with like blas and lapack. Use None or "auto" to search them
-                        automatically.
+                        Math librairies to link with like blas and lapack. Use None or "auto" to search
+                        them automatically.
     --embed-maths       Embed math libraries as static library
 
   HDF5/Med libraries options:
@@ -210,11 +212,11 @@ Options:
 
   Boost Options:
     --boost-includes=BOOST_INCLUDES
-                        path to the directory where the boost includes are,                                    e.g.,
-                        /path/to/boost_1_55_0/stage/include
+                        path to the directory where the boost includes are,
+                        e.g., /path/to/boost_1_55_0/stage/include
     --boost-libs=BOOST_LIBS
-                        path to the directory where the boost libs are,                                    e.g.,
-                        path/to/boost_1_55_0/stage/lib
+                        path to the directory where the boost libs are,
+                        e.g., path/to/boost_1_55_0/stage/lib
     --boost-mt          select multi-threaded libraries
     --boost-abi=BOOST_ABI
                         select libraries with tags (gd for debug, static is automatically added),
@@ -222,16 +224,16 @@ Options:
     --boost-linkage_autodetect
                         auto-detect boost linkage options (don't get used to it / might break other stuff)
     --boost-toolset=BOOST_TOOLSET
-                        force a toolset e.g. msvc, vc90,                                                gcc, mingw, mgw45
-                        (default: auto)
+                        force a toolset e.g. msvc, vc90,
+                        gcc, mingw, mgw45 (default: auto)
     --boost-python=BOOST_PYTHON
-                        select the lib python with this version                                                 (default:
-                        310)
+                        select the lib python with this version
+                        (default: 311)
 
   MFront library options:
     --disable-mfront    disable the MFRONT support
-    --enable-mfront     force the MFRONT support. The TFELHOME environment variable can be used to choose a prefered
-                        version.
+    --enable-mfront     force the MFRONT support. The TFELHOME environment variable can be used to choose
+                        a prefered version.
 
   External programs options:
     --with-prog-gmsh    Force support of gmsh program
@@ -254,6 +256,6 @@ Options:
 
   Documentation options:
     --disable-doc       Disable documentation support.
-    --enable-doc        Force documentation support.NB: The documentation build must be explicitly  called by running `waf
-                        doc|doc_debug`.
+    --enable-doc        Force documentation support.NB: The documentation build must be explicitly  called
+                        by running `waf doc|doc_debug`.
     --enable-pdf        Build pdf documentation.
